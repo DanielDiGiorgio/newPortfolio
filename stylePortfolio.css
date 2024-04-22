@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* Adicione a imagem de fundo */
+    background-image: url('/images/kai-pilger-Ef6iL87-vOA-unsplash.jpg');
+    /* Ajuste outras propriedades conforme necessário */
+    background-size: cover; /* Para cobrir toda a área */
+    background-repeat: no-repeat; /* Para não repetir a imagem */
+    color: #fff; /* Cor do texto */
+}
+
+/* Outras regras de estilo para o portfólio */
+
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.portfolio-content {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-me, .skills, .projects, .contact {
+    margin-bottom: 30px;
+}
+
+.about-me h2, .skills h2, .projects h2, .contact h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-me p, .contact p {
+    font-size: 18px;
+}
+
+.skills ul, .projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills ul li, .projects ul li {
+    margin-bottom: 5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 40px; /* Tamanho dos ícones */
+}
+
+/* Novo layout */
+
+.portfolio-content {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.about-me, .skills, .projects, .contact {
+    border-bottom: 1px solid #fff; /* Linha separadora */
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.about-me h2, .skills h2, .projects h2, .contact h2 {
+    color: #007bff; /* Cor do título */
+}
+
+.button {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links img {
+    width: 30px; /* Tamanho dos ícones */
+}
+
+/* CSS principal para telas maiores */
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.portfolio-content {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* CSS para dispositivos menores */
+@media screen and (max-width: 480px) {
+    .portfolio-container {
+        min-height: auto;
+    }
+}
+
