@@ -1,214 +1,207 @@
-body, html {
-    margin: 0;
-    padding: 0;
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 .space-bg {
-    width: 100%;
-    height: 100%;
-    background-image: url('/images/nasa-yZygONrUBe8-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: moveSpace 60s linear infinite;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/nasa-yZygONrUBe8-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: moveSpace 60s linear infinite;
 }
 
 @keyframes moveSpace {
-    from {
-        background-position: center top;
-    }
-    to {
-        background-position: center bottom;
-    }
+  from {
+    background-position: center top;
+  }
+  to {
+    background-position: center bottom;
+  }
 }
 
 .planet-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: shake 1s infinite alternate;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: shake 1s infinite alternate;
 }
 
 .planet {
-    width: 94px;
-    height: 94px;
-    background-image: url('/images/icons8-europa-94.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Ajuste o z-index do planeta */
+  width: 94px;
+  height: 94px;
+  background-image: url("/images/icons8-europa-94.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ajuste o z-index do planeta */
 }
 
 .rocket-container {
-    position: absolute;
-    top: -400px; /* Aumenta a posição inicial acima do topo da tela */
-    left: calc(50% - 47px); /* Centraliza o foguete horizontalmente */
-    transform: translateX(-50%);
-    animation: launchRocket 6s ease-in-out forwards; /* Ajusta a velocidade da animação */
-    z-index: 2; /* Ajusta o z-index do foguete para ficar sobre o planeta */
-}   
-
+  position: absolute;
+  top: -400px; /* Aumenta a posição inicial acima do topo da tela */
+  left: calc(50% - 47px); /* Centraliza o foguete horizontalmente */
+  transform: translateX(-50%);
+  animation: launchRocket 6s ease-in-out forwards; /* Ajusta a velocidade da animação */
+  z-index: 2; /* Ajusta o z-index do foguete para ficar sobre o planeta */
+}
 
 .rocket {
-    width: 94px;
-    height: 94px;
-    background-image: url('/images/icons8-foguete-94.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2; /* Ajuste o z-index do foguete após a animação */
+  width: 94px;
+  height: 94px;
+  background-image: url("/images/icons8-foguete-94.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Ajuste o z-index do foguete após a animação */
 }
 
 @keyframes launchRocket {
-    0% {
-        top: -400px; /* Posição inicial acima do topo da tela */
-        transform: translate(-50%, -50%); /* Mantém a posição horizontal do foguete */
-    }
-    100% {
-        top: calc(50% - 100px); /* Posição final no centro do planeta */
-        transform: translate(-50%, -50%) scale(1); /* Mantém o foguete no centro */
-    }
+  0% {
+    top: -400px; /* Posição inicial acima do topo da tela */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Mantém a posição horizontal do foguete */
+  }
+  100% {
+    top: calc(50% - 100px); /* Posição final no centro do planeta */
+    transform: translate(-50%, -50%) scale(1); /* Mantém o foguete no centro */
+  }
 }
 
 .message {
-    position: absolute;
-    top: 50%;
-    left: calc(50% + 50px);
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 18px;
-    opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 50px);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 18px;
+  opacity: 0;
 }
 
 .message.active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .click-message {
-    color: #fff;
-    font-size: 16px;
+  color: #fff;
+  font-size: 16px;
 }
 
 .click-instruction {
-    position: absolute;
-    bottom: -50px; /* Distância do fundo da tela */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%);
-    font-size: 16px;
-    color: #000000; /* Cor do texto */
-    z-index: 9999; /* Valor alto para garantir que fique acima dos outros elementos */
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  position: absolute;
+  bottom: -50px; /* Distância do fundo da tela */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: #000000; /* Cor do texto */
+  z-index: 9999; /* Valor alto para garantir que fique acima dos outros elementos */
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
 }
 
 .arrow-container {
-    position: absolute;
-    top: calc(50% + 50px); /* Posiciona a flecha abaixo do centro do planeta */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%);
+  position: absolute;
+  top: calc(50% + 50px); /* Posiciona a flecha abaixo do centro do planeta */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%);
 }
 
 .arrow {
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 30px solid #000000; /* Cor da flecha */
-    animation: moveArrow 2s infinite alternate; /* Animação da flecha */
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid #000000; /* Cor da flecha */
+  animation: moveArrow 2s infinite alternate; /* Animação da flecha */
 }
 
 @keyframes moveArrow {
-    from {
-        transform: translateY(0); /* Posição inicial */
-    }
-    to {
-        transform: translateY(10px); /* Posição final */
-    }
+  from {
+    transform: translateY(0); /* Posição inicial */
+  }
+  to {
+    transform: translateY(10px); /* Posição final */
+  }
 }
 
 /* CSS principal para telas maiores */
 .container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 .planet-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: shake 1s infinite alternate;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: shake 1s infinite alternate;
 }
 
 .rocket-container {
-    position: absolute;
-    top: -400px;
-    left: calc(50% - 47px);
-    transform: translateX(-50%);
-    animation: launchRocket 6s ease-in-out forwards;
-    z-index: 2;
+  position: absolute;
+  top: -400px;
+  left: calc(50% - 47px);
+  transform: translateX(-50%);
+  animation: launchRocket 6s ease-in-out forwards;
+  z-index: 2;
 }
 
 /* CSS principal para telas maiores */
 .container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    background-image: url('/images/nasa-yZygONrUBe8-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url("/images/nasa-yZygONrUBe8-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .planet-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: shake 1s infinite alternate;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: shake 1s infinite alternate;
 }
 
 .rocket-container {
-    position: absolute;
-    top: -400px;
-    left: calc(50% - 47px);
-    transform: translateX(-50%);
-    animation: launchRocket 6s ease-in-out forwards;
-    z-index: 2;
+  position: absolute;
+  top: -400px;
+  left: calc(50% - 47px);
+  transform: translateX(-50%);
+  animation: launchRocket 6s ease-in-out forwards;
+  z-index: 2;
 }
 
 /* CSS para dispositivos menores */
-@media screen and (max-width: 480px) {
-    .container {
-        height: auto;
-        background-image: none;
-        background-color: #121212; /* Cor de fundo do espaço sideral */
-    }
+@media screen and (max-width: 320px) {
+  .container {
+    height: auto;
+    background-image: url(/images/nasa-yZygONrUBe8-unsplash-mobile.jpg);
+  }
 }
-
-
-
-
-
-
-
-
-
