@@ -2,6 +2,8 @@ body,
 html {
   margin: 0;
   padding: 0;
+  font-family: "Trebuchet MS";
+  font-weight: bold;
 }
 
 .container {
@@ -14,7 +16,7 @@ html {
 .space-bg {
   width: 100%;
   height: 100%;
-  background-image: url("/images/nasa-yZygONrUBe8-unsplash.jpg");
+  background-image: url("/images/kai-pilger-Ef6iL87-vOA-unsplash.jpg");
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -115,7 +117,7 @@ html {
   left: 50%; /* Centraliza horizontalmente */
   transform: translateX(-50%);
   font-size: 16px;
-  color: #000000; /* Cor do texto */
+  color: #fff; /* Cor do texto */
   z-index: 9999; /* Valor alto para garantir que fique acima dos outros elementos */
   white-space: nowrap; /* Impede que o texto quebre em várias linhas */
 }
@@ -132,7 +134,7 @@ html {
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-bottom: 30px solid #000000; /* Cor da flecha */
+  border-bottom: 30px solid #fff; /* Cor da flecha */
   animation: moveArrow 2s infinite alternate; /* Animação da flecha */
 }
 
@@ -176,7 +178,7 @@ html {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  background-image: url("/images/nasa-yZygONrUBe8-unsplash.jpg");
+  background-image: url("/images/kai-pilger-Ef6iL87-vOA-unsplash.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -202,6 +204,6 @@ html {
 @media screen and (max-width: 320px) {
   .container {
     height: auto;
-    background-image: url(/images/nasa-yZygONrUBe8-unsplash-mobile.jpg);
+    background-image: url(/images/kai-pilger-Ef6iL87-vOA-unsplash-mobile.jpg);
   }
 }

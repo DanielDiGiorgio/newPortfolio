@@ -1,13 +1,24 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Trebuchet MS";
   /* Adicione a imagem de fundo */
-  background-image: url("/images/kai-pilger-Ef6iL87-vOA-unsplash.jpg");
+  background-image: url("/images/nasa-yZygONrUBe8-unsplash.jpg");
   /* Ajuste outras propriedades conforme necessário */
   background-size: cover; /* Para cobrir toda a área */
   background-repeat: no-repeat; /* Para não repetir a imagem */
   color: #fff; /* Cor do texto */
+  font-weight: bold;
+  animation: moveSpace 60s linear infinite;
+}
+
+@keyframes moveSpace {
+  from {
+    background-position: center top;
+  }
+  to {
+    background-position: center bottom;
+  }
 }
 
 /* Outras regras de estilo para o portfólio */
@@ -35,6 +46,7 @@ body {
 .projects,
 .contact {
   margin-bottom: 30px;
+  font-size: 18px;
 }
 
 .about-me h2,
@@ -152,5 +164,6 @@ body {
 @media screen and (max-width: 320px) {
   .portfolio-container {
     min-height: auto;
+    background-image: url(/images/nasa-yZygONrUBe8-unsplash-mobile.jpg);
   }
 }
